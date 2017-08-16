@@ -15,7 +15,8 @@ export default class Entry extends Component {
 
 var styleEntry = {
   display: 'inline-block',
-  marginLeft: 50
+  marginLeft: 15,
+  marginRight: 15
 }
 
 var styleName = {

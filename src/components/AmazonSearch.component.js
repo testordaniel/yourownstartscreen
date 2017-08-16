@@ -18,4 +18,5 @@ export default class AmazonSearch extends Component {
 var styleSearch = {
   maxWidth: 250,
   marginTop: 10,
+  boxSizing: "border-box"
 }

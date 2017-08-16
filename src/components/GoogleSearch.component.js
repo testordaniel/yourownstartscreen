@@ -17,4 +17,5 @@ export default class GoogleSearch extends Component {
 
 var styleSearch = {
   maxWidth: 250,
+  boxSizing: "border-box"
 }
