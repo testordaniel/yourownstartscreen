@@ -11,9 +11,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
+          <Navbar></Navbar>
           <h2>Welcome to your own start screen</h2>
           <GoogleSearch></GoogleSearch>
           <AmazonSearch></AmazonSearch>
+
         </div>
         <div style={styleBody}>
           <Entry link="https://github.com/" name="Github" icon="https://www.github.com/favicon.ico"></Entry>

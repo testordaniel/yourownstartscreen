@@ -5,10 +5,12 @@ export default class Navbar extends Component{
 
   render() {
     return(
-      <ul className="nav">
-        <li>About</li>
-        <li>Login</li>
-      </ul>
+      <div className="topnav" id="myTopnav">
+        <a href="#home">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a className="login" href="#login" style={{float: 'right'}}>Login</a>
+      </div>
     );
   }
 }
