@@ -7,6 +7,11 @@ import AmazonSearch from './components/AmazonSearch.component.js';
 import Navbar from './components/Navbar.component.js';
 
 class App extends Component {
+
+  componentDidMount() {
+    document.title = "Your own start screen";
+  }
+
   render() {
     return (
       <div className="App">
