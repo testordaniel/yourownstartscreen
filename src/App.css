@@ -4,7 +4,6 @@
 
 .App-header {
   background: #222922;
-  padding-bottom: 20px;
   color: white;
 }
 
@@ -13,6 +12,6 @@
 }
 
 .divStyle {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
 };

@@ -1,3 +1,10 @@
+.webdesigntuts-workshop {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 20px;
+	display: inline-block;
+}
+
 .webdesigntuts-workshop input {
 	background: #222;
 	background: linear-gradient(#333, #222);
@@ -57,7 +64,6 @@
 	font-size: 13px;
 	font-weight: 400;
 	height: 40px;
-	line-height: 40px;
 	margin: 0;
 	padding: 0;
 	position: relative;

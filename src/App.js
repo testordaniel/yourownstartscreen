@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Switch, Route } from 'react-router-dom'
 import './App.css';
 import Entry from './components/Entry.component.js';
-import GoogleSearch from './components/GoogleSearch.component.js';
-import AmazonSearch from './components/AmazonSearch.component.js';
+import Searchbar from './components/Searchbar.component.js';
 import Navbar from './components/Navbar.component.js';
+import Heading from './components/Heading.component.js';
+import Main from './components/Main.component.js';
+import About from './components/About.component.js';
+import Login from './components/Login.component.js';
 
 class App extends Component {
 
@@ -17,26 +20,21 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <Navbar></Navbar>
-          <h2>Welcome to your own start screen</h2>
-          <GoogleSearch></GoogleSearch>
-          <AmazonSearch></AmazonSearch>
-
         </div>
-        <div style={styleBody}>
-          <Entry link="https://github.com/" name="Github" icon="https://www.github.com/favicon.ico"></Entry>
-          <Entry link="https://www.facebook.com/" name="Facebook" icon="https://www.facebook.com/favicon.ico"></Entry>
-          <Entry link="https://www.youtube.com/" name="Youtube" icon="https://www.youtube.com/favicon.ico"></Entry>
-          <Entry link="https://www.stackoverflow.com/" name="Stackoverflow" icon="https://www.stackoverflow.com/favicon.ico"></Entry>
-          <Entry link="https://www.amazon.de/" name="Amazon" icon="https://www.amazon.de/favicon.ico"></Entry>
+        <div>
+        <Switch>
+          <Route exact path='/' component={Main}/>
+          <Route exact path='/contact' component={Main}/>
+          <Route path='/about' component={About}/>
+          <Route exact path='/login' component={Login}/>
+        </Switch>
         </div>
       </div>
     );
   }
 }
 
-var styleBody = {
-  marginTop: 30
-}
+
 
 
 export default App;
