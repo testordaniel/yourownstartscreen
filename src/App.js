@@ -8,6 +8,7 @@ import Heading from './components/Heading.component.js';
 import Main from './components/Main.component.js';
 import About from './components/About.component.js';
 import Login from './components/Login.component.js';
+import AddSearchbar from './components/AddSearchbar.component.js';
 
 class App extends Component {
 
@@ -27,14 +28,12 @@ class App extends Component {
           <Route exact path='/contact' component={Main}/>
           <Route path='/about' component={About}/>
           <Route exact path='/login' component={Login}/>
+          <Route exact path='/addSearchbar' component={AddSearchbar}/>
         </Switch>
         </div>
       </div>
     );
   }
 }
-
-
-
 
 export default App;

@@ -25,11 +25,11 @@ constructor() {
     const { width } = this.state;
     if(width >= 500) {
       return(
-        <h3 style={{padding:5}}>Welcome to your own start screen</h3>
+        <h3 style={{paddingTop:25, marginTop: 0, marginBottom: 0}}>Welcome to your own start screen</h3>
       );
     } else if (width >= 348){
       return(
-      <h4 style={{padding:5}}>Welcome to your own start screen</h4>
+      <h4 style={{padding:5, marginTop: 0, marginBottom: 0}}>Welcome to your own start screen</h4>
     );
   } else {
       return(

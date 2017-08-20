@@ -1,0 +1,17 @@
+.blur {
+  background: rgb(34,34,34); /* for IE */
+  background: rgba(34,34,34,0.75);
+  position: relative;
+}
+
+.add {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  margin: 15px;
+  border: 1px solid;
+  border-radius: 6px;
+  color: white;
+  opacity: 0.7;
+}

@@ -17,11 +17,11 @@ var styleEntry = {
   display: 'inline-block',
   marginLeft: 15,
   marginRight: 15,
-  marginTop: 15
+  marginTop: 25
 }
 
 var styleName = {
   color: '#000000',
   textDecoration: 'none',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
 }

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Entry from './Entry.component.js';
 import Searchbar from './Searchbar.component.js';
 import Heading from './Heading.component.js';
-import './Main.component.css';
+import './css/Main.component.css';
+import { Link } from 'react-router-dom'
 
 export default class Main extends Component {
 
@@ -29,14 +30,14 @@ render() {
 
   return (
       <div>
-        <div className="blurred-bg">
-          <Heading/>
+        <div className="blur">
+        <Heading/>
           {
             searchbars.map
               (elem => <Searchbar name={elem.name} site={elem.site} parameter={elem.parameter}/>)
           }
+        <Link to='/addSearchbar'><span className="add">+</span></Link>
         </div>
-        <hr/>
         <div>
           {
             entries.map

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Searchbar.component.css';
+import './css/Searchbar.component.css';
 
 export default class Searchbar extends Component {
   render() {
@@ -14,12 +14,11 @@ export default class Searchbar extends Component {
   }
 
   componentDidMount(){
-   this.nameInput.focus();
-}
+    this.nameInput.focus();
+  }
 }
 
 var styleSearch = {
   maxWidth: 250,
   boxSizing: "border-box",
-
 }
