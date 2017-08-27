@@ -3,48 +3,49 @@ import Entry from './Entry.component.js';
 import Searchbar from './Searchbar.component.js';
 import Heading from './Heading.component.js';
 import './css/Main.component.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { CookiesProvider, withCookies, Cookies } from 'react-cookie';
+import Edit from './Edit.component.js';
+import SearchbarContent from './SearchbarContent.component.js';
+import EntryContent from './EntryContent.component.js';
+import FirstTime from './FirstTime.component.js';
 
 export default class Main extends Component {
 
-render() {
-  var entries = [
-    {"name":"Github", "link":"https://github.com/", "icon":"https://www.github.com/favicon.ico"},
-    {"name":"Facebook", "link":"https://www.facebook.com/", "icon":"https://www.facebook.com/favicon.ico"},
-    {"name":"Youtube", "link":"https://www.youtube.com/", "icon":"https://www.youtube.com/favicon.ico"},
-    {"name":"Stackoverflow", "link":"https://www.stackoverflow.com/", "icon":"https://www.stackoverflow.com/favicon.ico"},
-    {"name":"Amazon", "link":"https://www.amazon.de/", "icon":"https://www.amazon.de/favicon.ico"},
-  ];
+  render() {
 
-  var searchbars = [
-    {"name":"Google", "site":"https://www.google.com/search", "parameter":"q"},
-    {"name":"Amazon", "site":"https://www.amazon.de/s", "parameter":"field-keywords"},
-    {"name":"Youtube", "site":"https://www.youtube.com/results", "parameter":"search_query"},
-    {"name":"Google", "site":"https://www.google.com/search", "parameter":"q"},
-    {"name":"Amazon", "site":"https://www.amazon.de/s", "parameter":"field-keywords"},
-    {"name":"Google", "site":"https://www.google.com/search", "parameter":"q"},
-    {"name":"Amazon", "site":"https://www.amazon.de/s", "parameter":"field-keywords"},
-    {"name":"Youtube", "site":"https://www.youtube.com/results", "parameter":"search_query"},
 
-  ]
+    var searchbars = [
+      {"name":"Google", "site":"https://www.google.com/search", "parameter":"q"},
+      {"name":"Amazon", "site":"https://www.amazon.de/s", "parameter":"field-keywords"},
+      {"name":"Youtube", "site":"https://www.youtube.com/results", "parameter":"search_query"},
+    ]
 
-  return (
-      <div>
-        <div className="blur">
-        <Heading/>
-          {
-            searchbars.map
-              (elem => <Searchbar name={elem.name} site={elem.site} parameter={elem.parameter}/>)
-          }
-        <Link to='/addSearchbar'><span className="add">+</span></Link>
-        </div>
-        <div>
-          {
-            entries.map
-            (elem => <Entry name={elem.name} link={elem.link} icon={elem.icon}/>)
-          }
-        </div>
-      </div>
-   );
-}
+    const cookies = new Cookies();
+    var search = cookies.get('searchbars');
+    if(search == 'undefined' || search == null) {
+      search = [];
+    }
+    var entries = cookies.get('entries');
+    var firstTime = false;
+    if(entries == 'undefined' || entries == null) {
+      entries = [];
+      firstTime = true;
+    }
+
+      return (
+          <div>
+            <div className="blur">
+            <Heading/>
+            <SearchbarContent content={search}/>
+            <Edit type="search"/>
+            </div>
+            <div>
+              <EntryContent content= {entries}/>
+              <FirstTime firstTime={firstTime}/>
+              <Edit type="entry"/>
+            </div>
+          </div>
+       );
+  }
 }

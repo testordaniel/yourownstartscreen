@@ -86,3 +86,57 @@
 	box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
 	top: 1px;
 }
+
+
+
+
+
+
+
+
+.webdesign-workshop select {
+	background: #222;
+	background: linear-gradient(#333, #222);
+	border: 1px solid #444;
+	border-radius: 5px;
+	box-shadow: 0 2px 0 #000;
+	color: #888;
+	font-family: 'Cabin', helvetica, arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	height: 40px;
+	margin: 20px;
+	padding: 0 10px;
+	text-shadow: 0 -1px 0 #000;
+  display: block;
+}
+
+.ie .webdesign-workshop select {
+	line-height: 40px;
+}
+
+.webdesign-workshop select::-webkit-input-placeholder {
+   color: #888;
+}
+
+.webdesign-workshop select:-moz-placeholder {
+   color: #888;
+}
+
+.webdesign-workshop select:focus {
+	animation: glow 800ms ease-out infinite alternate;
+	background: #222922;
+	background: linear-gradient(#333933, #222922);
+	border-color: #393;
+	box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+	color: #efe;
+	outline: none;
+}
+
+.webdesign-workshop select:focus::-webkit-input-placeholder {
+	color: #efe;
+}
+
+.webdesign-workshop select:focus:-moz-placeholder {
+	color: #efe;
+}

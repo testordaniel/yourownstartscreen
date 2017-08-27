@@ -1,0 +1,55 @@
+.editSearchbar {
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 6px;
+  opacity: 0.7;
+  display: inline-block;
+}
+
+
+.pc {
+  position: absolute;
+  margin: 15px;
+  bottom: 0;
+}
+
+.add {
+  right: 60px;
+}
+
+.remove {
+  right: 0;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.mobile {
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+span {
+}
+
+.removeMobile {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.search {
+  color: #A4A4A4;
+}
+
+.search:hover {
+    color: white;
+}
+
+.entry {
+  color: rgb(34,34,34); /* for IE */
+  color: rgba(34,34,34,0.75);
+}
+
+.entry:hover {
+  color: #222922;
+}

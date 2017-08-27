@@ -10,9 +10,7 @@ export default class Navbar extends Component{
       <div className="topnav" id="myTopnav">
         <nav>
             <Link to='/'>Home</Link>
-            <Link to='/contact'>Contact</Link>
             <Link to={{ pathname: '/about'}}>About</Link>
-            <Link to='/login' className="login" style={{float: 'right'}}>Login</Link>
         </nav>
       </div>
     );

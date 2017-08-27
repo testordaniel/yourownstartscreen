@@ -1,0 +1,10 @@
+.no-underline {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.divStyle {
+  height: 35px;
+  width: 35px;
+};
